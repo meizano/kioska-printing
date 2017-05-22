@@ -11,7 +11,7 @@
     </head>
 <body>
     <div id="login-kioska">
-    <img src="img/logo-unila-statuta-final-4.png" width="150px" height="150px" style="margin-top: 10px;">
+    <img src="img/logo-unila-statuta-final-4.png" width="200px" height="200px" style="margin-top: 10px;">
     <br></br>
     <b style="font-size:30px;">KIOSKA UPT PERPUSTAKAAN UNIVERSITAS LAMPUNG</b>
     <div class="row">
@@ -19,6 +19,7 @@
         </div>
     <div class="col-xs-8 col-md-4 col-lg-4">
         <form >
+        <hr width="75%" align="center"></hr>
         <h1> Pengguna </h1>
         <div class="form-group">
             <input type="email" id="InputEmail" class="form-control" placeholder="Email">
@@ -34,12 +35,13 @@
         <div class="col-xs-2 col-md-4 col-lg-4">
         </div>
         </div>
+        <hr width="75%" align="center"></hr>
     <footer class="row">
     <div class="col-xs-12 col-md-12 col-lg-12" style="font-size:20px;">
     <br></br>
     <br></br>
     <br>
-    Copy Right UPT Perpustakaan Universitas Lampung</div>
+    <h5>© 2017 UPT Perpustakaan Universitas Lampung</div></h5>
     </footer>
     </div>
         </body>
