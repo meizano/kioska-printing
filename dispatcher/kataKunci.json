@@ -1,0 +1,30 @@
+{
+    "Kata Kunci": ["pengarang" : [
+                    "Meizano Ardhi Muhammad",
+        "Mardiana",
+        "Dikpride Despa",
+        "Martinus",
+        "Farid Hambali",
+        "Roby Syah Putra"
+
+                 ]
+        ], ["tahun" : [
+                    1960,
+        1990,
+        1995,
+        2015,
+        2016,
+        2017
+
+                 ]
+        ], ["judul" : [
+                    "Kamus Bahasa Lampung",
+        "Elektronika",
+        "Tegangan Tinggi",
+        "Informatika",
+        "Pemrograman Berorientasi Obyek",
+        "Sistem Basis Data"
+
+                 ]
+        ],
+}
