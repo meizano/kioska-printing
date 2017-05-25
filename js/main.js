@@ -1,4 +1,14 @@
 //Get json pada saat select dipilih
+$.ajax({
+    url:'http://localhost/' +
+        'proyek-dpk-lampung',
+        type:'GET',
+        success: function(data){
+           $('#hasil').html(data);
+        }
+});
+
+
 $('#pencarianRinciBtn').on('click', function () {
     $('#selectFakultas').html('');
     $.getJSON("dispatcher/fakultas.json", function (data) {
