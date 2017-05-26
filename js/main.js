@@ -1,11 +1,17 @@
+// Mengaktifkan crossOrigin
+$.ajaxSetup({
+    crossOrigin: true
+});
+
 //Get json pada saat select dipilih
 $.ajax({
-    url:'http://localhost/' +
-        'proyek-dpk-lampung',
-        type:'GET',
-        success: function(data){
-           $('#hasil').html(data);
-        }
+    crossOrigin: true,
+    url: 'http://digilib.unila.ac.id/' +
+        'view/year/2017.html',
+    type: 'GET',
+    success: function (data) {
+        $('#hasil').html(data);
+    }
 });
 
 
