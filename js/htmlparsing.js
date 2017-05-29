@@ -1,4 +1,3 @@
-use strict;
 var hasil = document.getElementById("hasil");
 
 var dataPustaka;
@@ -71,12 +70,15 @@ function parsingPustaka(dPustaka) {
             a.setAttribute("target", "_blank");
 
             div.appendChild(a);
-            div.className += "alert alert-success";
+
+//            div.appendChild(pustaka);
 
             hasil.appendChild(div);
         }
 
 }
+
+var kataKunci = 'tanah';
 
 // Mengaktifkan crossOrigin
 $.ajaxSetup({
@@ -86,8 +88,7 @@ $.ajaxSetup({
 //Get json pada saat select dipilih
 $.ajax({
     crossOrigin: true,
-    url: 'http://digilib.unila.ac.id/' +
-        'view/year/2017.html',
+    url: 'http://digilib.unila.ac.id/view/year/2017.html',
     type: 'GET',
     dataType: 'html',
     success: function (data) {
@@ -103,17 +104,4 @@ $.ajax({
 
 });
 
-$('#pencarianRinciBtn').on('click', function () {
-    $('#selectFakultas').html('');
-    $.getJSON("dispatcher/fakultas.json", function (data) {
-        $.each(data["Fakultas"], function (key, val) {
-            $('#selectFakultas').append("<option value='" + val + "'>" + val + "</option>");
-        });
-    });
-    $('#selectTipePustaka').html('');
-    $.getJSON("dispatcher/tipePustaka.json", function (data) {
-        $.each(data["Tipe Pustaka"], function (key, val) {
-            $('#selectTipePustaka').append("<option value='" + val + "'>" + val + "</option>");
-        });
-    });
-})
+

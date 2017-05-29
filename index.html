@@ -1,74 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Kioska Printing">
-        <meta name="author" content="Meizano">
-        <meta name="copyright" content="&copy; 2017 UPT Perpustakaan Universitas Lampung" />
+<head>
 
-        <title>Kioska Printing</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kioska Printing">
+    <meta name="author" content="Meizano">
+    <meta name="copyright" content="&copy; 2017 UPT Perpustakaan Universitas Lampung" />
 
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/kioska.css"/>
+    <title>Kioska Printing</title>
 
-    </head>
-    <body>
-      <div class="container">
-                      <div class="col-md-12 Head">
-                <div class="col-md-2 logo"><img class="logo" src="img/logo-unila-statuta-final-4.png"/> </div>
-                <div class="col-md-10 text-header"><b>KIOSKA PRINTING UPT PERPUSTAKAAN UNIVERSITAS LAMPUNG</b></div>
-            </div>
-                    <div class="row" id="hasil">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/kioska.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-12 Head">
+            <div class="col-md-2 logo"><img class="logo" src="img/logo-unila-statuta-final-4.png" /> </div>
+            <div class="col-md-10 text-header"><b>KIOSKA PRINTING UPT PERPUSTAKAAN UNIVERSITAS LAMPUNG</b></div>
+        </div>
+
         <div class="row">
 
             <div class="col-md-offset-2 col-lg-offset-2 col-xs-8 col-md-8 col-lg-8  body-kioska">
-               <span id="petunjukPencarian">Masukkan kata kunci pencarian</span>
-               <form id="pencarian" action="form_hasil.php" method="post">
-               <fieldset>
-                <div class="input-group cari">
-                    <input type="text" class="form-control input-lg" placeholder="Kata Kunci" id="kataKunci" name="kataKunci">
+                <span id="petunjukPencarian">Masukkan Kode Pustaka</span>
+                <form id="kodePustaka" method="post">
+                    <fieldset>
+                        <div class="input-group cari">
+                            <input type="text" class="form-control input-lg" placeholder="Kode Pustaka" id="kataKunci" name="kataKunci">
 
-                    <div class="input-group-btn">
-                        <button id="pencarianRinciBtn" type="button" class="btn  btn-lg" data-toggle="collapse" data-target="#pencarianRinci"> ...</button>
-                        <button class="btn btn-lg btn-info" type="submit">Cari</button>
+                            <div class="input-group-btn">
+                                <button class="btn btn-lg btn-info" type="submit">Buka</button>
 
-                    </div>
-                </div>
-                </fieldset>
-                <br/>
-                <div id="pencarianRinci" class="collapse">
-                    <div class="row" style="background-color: antiquewhite;">
-                        <div class="col-md-1 col-lg-1"></div>
-                        <div class="col-md-4 col-lg-4" style="background-color: antiquewhite;">
-                            <input class="form-control input-lg" type="text" placeholder="Pengarang"/>
-                            <br/>
-                            <input class="form-control input-lg" type="text" placeholder="Kata Kunci"/>
-                            <br/>
-                            <input class="form-control input-lg" type="text" placeholder="ID Karya Ilmiah"/>
+                            </div>
                         </div>
-                        <div class="col-md-1 col-lg-1"></div>
-                        <div class="col-md-1 col-lg-1"></div>
-                        <div class="col-md-4 col-lg-4" style="background-color: antiquewhite;">
-                            <input class="form-control input-lg" type="number" placeholder="Tahun Terbit" min="1960" max="2017" step="1" value="2017"/>
-                            <br/>
-                            <select id="selectFakultas" class="form-control input-lg" type="text" placeholder="Fakultas">
-                                <option>Semua Fakultas</option>
-                            </select>
-                            <br/>
-                            <select id="selectTipePustaka" class="form-control input-lg" type="text" placeholder="Tipe Karya Ilmiah">
-                                <option>Semua Tipe</option>
-                            </select>
-                        </div>
-                        <div class="col-md-1 col-lg-1"></div>
-                    </div>
-                </div>
+                    </fieldset>
+
                 </form>
             </div>
 
             <div class="col-xs-2 col-md-2 col-lg-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12" id="hasil"></div>
         </div>
 
         <footer class="col-md-12 Foot">
@@ -79,12 +58,13 @@
                 </p>
             </div>
         </footer>
-</div>
+    </div>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.ajax-cross-origin.min.js"></script>
-        <script src="js/main.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.ajax-cross-origin.min.js"></script>
+    <script src="js/main.js"></script>
 
-    </body>
+</body>
+
 </html>
