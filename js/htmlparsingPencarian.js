@@ -76,7 +76,7 @@ function parsingCari(dPustaka) {
 
         div.appendChild(a);
 
-        //        hasil.appendChild(div);
+        hasil.appendChild(div);
     }
 
 }
