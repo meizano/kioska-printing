@@ -1,0 +1,73 @@
+<!doctype html>
+<html class="no-js" lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HTML Parsing</title>
+    <meta name="description" content="HTML Parsing">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Meizano">
+
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        .blokMerah {
+            display: block;
+            background-color: red;
+            margin: 1px;
+            padding: 3px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        .blokBiru {
+            display: block;
+            background-color: blue;
+            margin: 1px;
+            padding: 3px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        #hasilBrowse {
+            display: inline-block;
+            width: 40%;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+        #hasilCari {
+            display: inline-block;
+            width: 40%;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="hasilBrowse"></div>
+        <div id="hasilCari"></div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.ajax-cross-origin.min.js"></script>
+    <script src="./js/htmlparsing.js"></script>
+    <script src="./js/htmlparsingPencarian.js"></script>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
-var hasil = document.getElementById("hasil");
+var hasilCari = document.getElementById("hasilCari");
 
-var dataPustaka;
+var dataPustakaCari;
 
 function parsingCari(dPustaka) {
     // Menambahkan (append) semua data ke dalam div#hasil
@@ -76,7 +76,9 @@ function parsingCari(dPustaka) {
 
         div.appendChild(a);
 
-        hasil.appendChild(div);
+        div.className += "blokBiru";
+
+        hasilCari.appendChild(div);
     }
 
 }
@@ -96,16 +98,16 @@ $.ajax({
     type: 'GET',
     dataType: 'html',
     success: function (data) {
+
         // Membuat dummy DOM element agar bisa diparsing seperti dokumen HTML
         var dataParsing = document.createElement('div');
         dataParsing.innerHTML = data;
 
         // Mengumpulkan semua data di dalam tag p yang ada di dalam div class="ep_view_page"
-        dataPustaka = dataParsing.querySelectorAll("div.ep_search_results tr td:nth-child(2)");
-        console.log(dataPustaka);
-        hasil.appendChild(dataPustaka[0]);
+        dataPustakaCari = dataParsing.querySelectorAll("div.ep_search_results tr td:nth-child(2)");
+        console.log(dataPustakaCari);
 
-        parsingCari(dataPustaka);
+        parsingCari(dataPustakaCari);
     }
 
 });
