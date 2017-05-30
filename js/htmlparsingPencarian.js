@@ -12,26 +12,31 @@ function parsingCari(dPustaka) {
         // Memilah data
         let namaNPM = pustaka.querySelector("span.person_name").innerHTML;
         let namaNPMarr = namaNPM.split(",");
-        let nama = namaNPMarr[0];
-        let NPM = namaNPMarr[1];
+        let nama = namaNPMarr[0].trim();
+        let NPM = namaNPMarr[1].trim();
         console.log(nama);
         console.log(NPM);
 
-        let judulPustaka = pustaka.querySelector("a > em").innerHTML;
+        let judulPustaka = pustaka.querySelector("a > em").innerHTML.trim();
         console.log(judulPustaka);
 
-        let linkPustaka = pustaka.querySelector("a").getAttribute("href");
+        let linkPustaka = pustaka.querySelector("a").getAttribute("href").trim();
         console.log(linkPustaka);
 
         let tahunFakultasUniversitas = pustaka.innerHTML;
-        let tahun = tahunFakultasUniversitas.split("/span>").pop().split("<a").shift().split("(").pop().split(")").shift();
+        let tahun = tahunFakultasUniversitas.split("/span>").pop().split("<a").shift().split("(").pop().split(")").shift().trim();
         let fakultasUniversitas = tahunFakultasUniversitas.split("</a>").pop();
-        let FUarr = fakultasUniversitas.split(",");
-        let fakultas = FUarr[0];
-        let universitas = FUarr[1].split(".").shift();
-        console.log(tahun);
+        let fakultas = '';
+        let universitas = '';
+        let FUarr = fakultasUniversitas.split(".").shift();
+        let FUarrClean = FUarr.split(",");
+        fakultas = FUarrClean[0].trim();
+        if (FUarrClean[1]) {
+            universitas = FUarrClean[1].trim();
+        }
         console.log(fakultas);
         console.log(universitas);
+        console.log(tahun);
 
 
         // Membuat tag penampung data
@@ -71,9 +76,7 @@ function parsingCari(dPustaka) {
 
         div.appendChild(a);
 
-        //            div.appendChild(pustaka);
-
-        hasil.appendChild(div);
+        //        hasil.appendChild(div);
     }
 
 }
@@ -98,8 +101,8 @@ $.ajax({
         dataParsing.innerHTML = data;
 
         // Mengumpulkan semua data di dalam tag p yang ada di dalam div class="ep_view_page"
-        dataPustaka = dataParsing.querySelectorAll("div.ep_search_results tr");
-        //        console.log(dataPustaka);
+        dataPustaka = dataParsing.querySelectorAll("div.ep_search_results tr td:nth-child(2)");
+        console.log(dataPustaka);
         hasil.appendChild(dataPustaka[0]);
 
         parsingCari(dataPustaka);
