@@ -12,8 +12,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+// get query arguments
+var $_GET = {},
+    args = location.search.substr(1).split(/&/);
+for (var i=0; i<args.length; ++i) {
+    var tmp = args[i].split(/=/);
+    if (tmp[0] != "") {
+        $_GET[decodeURIComponent(tmp[0])] = decodeURIComponent(tmp.slice(1).join("").replace("+", " "));
+    }
+}
 'use strict';
-var DEFAULT_URL = './files/compressed.tracemonkey-pldi-09.pdf';
+//var DEFAULT_URL = './files/compressed.tracemonkey-pldi-09.pdf';
+var digilib = 'http://digilib.unila.ac.id/';
+//var kodePustaka = args[0];
+var kodePustaka = 25750;
+var filex = '/15/SKRIPSI%20FULL.pdf';
+var DEFAULT_URL = digilib + kodePustaka + filex;
 ;
 var pdfjsWebLibs;
 {

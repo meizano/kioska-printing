@@ -167,10 +167,10 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <input type="number" id="pageNumber" class="toolbarField pageNumber" title="Page" value="1" size="4" min="1" tabindex="15" data-l10n-id="page">
                 <span id="numPages" class="toolbarLabel"></span>
 
-                <button id="firstPage" class="toolbarButton firstPage pageUp" title="Go to First Page" tabindex="56" data-l10n-id="first_page">
+                <button id="firstPage" class="toolbarButton firstPage " title="Go to First Page" tabindex="56" data-l10n-id="first_page">x
               <span data-l10n-id="first_page_label">Go to First Page</span>
             </button>
-            <button id="lastPage" class="toolbarButton lastPage pageDown" title="Go to Last Page" tabindex="57" data-l10n-id="last_page">
+            <button id="lastPage" class="toolbarButton lastPage " title="Go to Last Page" tabindex="57" data-l10n-id="last_page">x
               <span data-l10n-id="last_page_label">Go to Last Page</span>
             </button>
               </div>
@@ -179,8 +179,10 @@ See https://github.com/adobe-type-tools/cmap-resources
                   <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
                 </button>
 
-
-                <button id="print" class="toolbarButton print hiddenMediumView" title="Print" tabindex="33" data-l10n-id="print">
+<button id="printDialog" class="toolbarButton print hiddenMediumView" title="Print" tabindex="33">
+                  <span data-l10n-id="print_label">Print</span>
+                </button>
+                <button id="print" class="toolbarButton print hiddenMediumView hidden" title="Print" tabindex="33" data-l10n-id="print">
                   <span data-l10n-id="print_label">Print</span>
                 </button>
 
