@@ -194,9 +194,10 @@ See https://github.com/adobe-type-tools/cmap-resources
                   <span data-l10n-id="open_file_label">Open</span>
                 </button>
 
-                            <button id="print" class="toolbarButton print hiddenMediumView" title="Print" tabindex="33" data-l10n-id="print">
+                            <button id="print" class="toolbarButton print hiddenMediumView" title="Print" tabindex="33" data-l10n-id="print" data-toggle="modal" data-target="#rincianprint">
                   <span data-l10n-id="print_label">Print</span>
                 </button>
+
 
                             <button id="download" class="toolbarButton download hiddenMediumView hidden" title="Download" tabindex="34" data-l10n-id="download">
                   <span data-l10n-id="download_label">Download</span>
@@ -372,6 +373,19 @@ See https://github.com/adobe-type-tools/cmap-resources
         <!-- overlayContainer -->
 
     </div>
+    <div class="modal fade" id="rincianprint" tabindex="-1" role="dialog" aria-labelledby="Printpage" style="background:transparent;">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header" style="background-color:antiquewhite;">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="Printpage">Silahkan pilihkan halaman berapa yang anda inginkan untuk di print !</h3>
+      </div>
+    <div class="modal-body"></div>
+    <div class="modal-footer"><button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Tutup</button>
+         </div>
+        </div>
+        </div>
+        </div>
     <!-- outerContainer -->
     <div id="printContainer"></div>
 </body>
