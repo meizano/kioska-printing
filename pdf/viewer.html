@@ -38,9 +38,13 @@ See https://github.com/adobe-type-tools/cmap-resources
 
     <!-- This snippet is used in production (included from viewer.html) -->
     <link rel="resource" type="application/l10n" href="locale/locale.properties">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <script src="l10n.js"></script>
     <script src="../js/pdf.js"></script>
-
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.ajax-cross-origin.min.js"></script>
+    <script src="../js/main.js"></script>
 
     <script src="viewer.js"></script>
 
@@ -374,18 +378,18 @@ See https://github.com/adobe-type-tools/cmap-resources
 
     </div>
     <div class="modal fade" id="rincianprint" tabindex="-1" role="dialog" aria-labelledby="Printpage" style="background:transparent;">
-    <div class="modal-dialog">
-    <div class="modal-content">
-    <div class="modal-header" style="background-color:antiquewhite;">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title" id="Printpage">Silahkan pilihkan halaman berapa yang anda inginkan untuk di print !</h3>
-      </div>
-    <div class="modal-body"></div>
-    <div class="modal-footer"><button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Tutup</button>
-         </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:antiquewhite;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="Printpage">Silahkan pilihkan halaman berapa yang anda inginkan untuk di print !</h3>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"><button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
+    </div>
     <!-- outerContainer -->
     <div id="printContainer"></div>
 </body>
