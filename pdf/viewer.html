@@ -384,7 +384,17 @@ See https://github.com/adobe-type-tools/cmap-resources
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h3 class="modal-title" id="Printpage">Silahkan pilihkan halaman berapa yang anda inginkan untuk di print !</h3>
                 </div>
-                <div class="modal-body"></div>
+                <div class="modal-body" style="text-align: center;">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <input type="text" id="InputHalamanAwal" class="col-md-2" placeholder="0" style="height: 50px; text-align: center;">
+                        <div class="col-md-2" style="text-align: center;"> s/d</div>
+                        <input type="text" id="InputHalamanAkhir" class="col-md-2" placeholder="0" style="height: 50px; text-align: center;">
+                        <div class="col-md-3"></div>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-info btn-lg">Print</button>
+                </div>
                 <div class="modal-footer"><button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Tutup</button>
                 </div>
             </div>
